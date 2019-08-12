@@ -1,142 +1,370 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsby-starter-blog-demo.netlify.com</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Aug 2019 03:24:28 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/new-beginnings/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
-&lt;h2&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
-&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;This however showed weasel&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Well uncritical so misled&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;this is very interesting&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Goodness much until that fluid owl&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When she reached the first hills of the &lt;strong&gt;Italic Mountains&lt;/strong&gt;, she had a last
-view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, the headline of
-&lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.&lt;/p&gt;
-&lt;h3&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
-&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-&lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[BJ.Yoon의 개발 이야기]]></title><description><![CDATA[BJ.Yoon의 개발 이야기]]></description><link>https://byungjune.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 12 Aug 2019 02:27:52 GMT</lastBuildDate><item><title><![CDATA[Safari Cookie 오류]]></title><description><![CDATA[쇼핑몰의 웹페이지 완성 후 크로스브라우저를 확인하던 중 사파리에서 다음과 같은 에러가 발생했다. 해당 에러가 발생한 기능의 서비스는 다음과 같다. Chrome에서는 정상적으로 동작하던 기능이 Safari에서는 에러를 발생시켰다. 해당 플로우 중 4-…]]></description><link>https://byungjune.github.io/browser/cookie-error/</link><guid isPermaLink="false">https://byungjune.github.io/browser/cookie-error/</guid><pubDate>Sun, 01 Apr 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;쇼핑몰의 웹페이지 완성 후 크로스브라우저를 확인하던 중 사파리에서 다음과 같은 에러가 발생했다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Unhandled promise rejection - JSON Parse error: Unterminated string&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;해당 에러가 발생한 기능의 서비스는 다음과 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;1. 비회원 접속
+2. 상품 선택 후 장바구니 담기 선택
+3. 해당 상품에 대한 정보를 로컬에 저장(서버저장X)
+4-1. 장바구니 페이지 접속 시 로컬에 저장되어 있던 데이터 로드
+4-2. 로그인 시 비회원 접속 상태에서 저장한 데이터를 서버를 회원의 장바구니 데이터에 추가&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Chrome에서는 정상적으로 동작하던 기능이 Safari에서는 에러를 발생시켰다.&lt;/p&gt;
+&lt;p&gt;해당 플로우 중 4-1에서 로컬에 저장된 데이터를 로드할 때 에러가 발생한 것이다.&lt;/p&gt;
+&lt;p&gt;이를 확인하기 위해 Safari와 Chrome에 저장된 데이터를 확인해보았다.&lt;/p&gt;
+&lt;p&gt;[Safari의 Cookie에 저장된 값]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{&amp;quot;&amp;#39;246:18:1&amp;#39;&amp;quot;:
+    {&amp;quot;product_id&amp;quot;:246,&amp;quot;option_id&amp;quot;:18,
+     &amp;quot;is_individual_delivery&amp;quot;:false,
+     &amp;quot;thumbnail&amp;quot;:&amp;quot;2017/01/01/246_shop1_107658.jpg&amp;quot;,
+     &amp;quot;product_name&amp;quot;:&amp;quot;[&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;[Chrome의 Cookie에 저장된 값]&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{&amp;quot;&amp;#39;222:75:2&amp;#39;&amp;quot;:
+    {&amp;quot;product_id&amp;quot;:222,
+     &amp;quot;option_id&amp;quot;:75,
+     &amp;quot;is_individual_delivery&amp;quot;:false,
+     &amp;quot;thumbnail&amp;quot;:&amp;quot;2016/12/01/222_shop1_357073.jpg&amp;quot;,
+     &amp;quot;product_name&amp;quot;:&amp;quot;￫ﾓﾜ￫ﾝﾼ￬ﾝﾴ￫ﾯﾸ￭ﾁﾬ￫ﾠﾈ￬ﾝﾴ￬ﾧﾀ ￪ﾰﾐ￪ﾷﾤ￫ﾧﾐ￫ﾞﾭ￬ﾝﾴ&amp;quot;,
+     &amp;quot;option_name&amp;quot;:&amp;quot;￪ﾸﾰ￫ﾳﾸ&amp;quot;,
+     &amp;quot;total_price&amp;quot;:2900,
+     &amp;quot;quantity&amp;quot;:1,&amp;quot;is_sell&amp;quot;:true,
+     &amp;quot;min_order_limit&amp;quot;:1,
+     &amp;quot;max_order_limit&amp;quot;:0,
+     &amp;quot;order_unit&amp;quot;:1
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;정상적으로 동작하는  Chrome과 에러를 일으키는  Safari의 Cookie에 저장된 값을 비교해보니, Safari에서는 product&lt;em&gt;name 이후의 부분이 잘려있었다. 해당 product&lt;/em&gt;name은 한글로 작성된 값을 저장하지 못해 발생하는 이슈였다.&lt;/p&gt;
+&lt;p&gt;(Chrome에서는 비정상적인 형태의 언어로 보여지지만, 데이터를 갖고와 다시 사용되는 과정에서 원래의 한글명으로 표기되었다.)&lt;/p&gt;
+&lt;p&gt;해당 이슈를 해소하기 위해 Cookie에 데이터 저장/읽을 때, encodeURI/decodeURI를  사용해주었다.&lt;/p&gt;
+&lt;p&gt;그랬더니 아래와 같이 encoding된 값이 Cookie에 저장되었고, deconding한 값을 정상적으로 사용할 수 있었다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;%7B%22&amp;#39;222:75:1&amp;#39;%22:%7B%22product_id%22:222,%22option_id%22:75,%22is_individual_delivery%22:false,%22thumbnail%22:%222016/12/01/222_shop1_357073.jpg%22,%22product_name%22:%22%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%AF%B8%ED%81%AC%EB%A0%88%EC%9D%B4%EC%A7%80%20%EA%B0%90%EA%B7%A4%EB%A7%90%EB%9E%AD%EC%9D%B4%22,%22option_name%22:%22%EA%B8%B0%EB%B3%B8%22,%22total_price%22:2900,%22quantity%22:1,%22is_sell%22:true,%22min_order_limit%22:1,%22max_order_limit%22:0,%22order_unit%22:1%7D%7D&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
-&lt;h3&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
-&lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;So baboon this&lt;/li&gt;
-&lt;li&gt;Mounted militant weasel gregariously admonishingly straightly hey&lt;/li&gt;
-&lt;li&gt;Dear foresaw hungry and much some overhung&lt;/li&gt;
-&lt;li&gt;Rash opossum less because less some amid besides yikes jeepers frenetic
-impassive fruitlessly shut&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rhetoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.&lt;/p&gt;
+&lt;p&gt;Cookie의 저장과 불러오기를 위해 사용한, encodeURI와 decodeURI를 추가한 함수는 아래와 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;const setCookie = (cname, cvalue, exdays) =&amp;amp;gt; {
+  console.log(&amp;#39;setCookie&amp;#39;);
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = &amp;quot;expires=&amp;quot;+ d.toUTCString();
+  document.cookie = cname + &amp;quot;=&amp;quot; + encodeURI(cvalue) + &amp;quot;;&amp;quot; + expires + &amp;quot;;path=/&amp;quot;;
+}
+
+const getCookie = (c_name) =&amp;amp;gt; {
+  console.log(&amp;#39;getCookie&amp;#39;);
+  if (document.cookie.length &amp;amp;gt; 0){
+    let c_start = document.cookie.indexOf(c_name + &amp;quot;=&amp;quot;);
+    let c_end = false;
+    if (c_start != -1) {
+      c_start = c_start + c_name.length + 1;
+      c_end = document.cookie.indexOf(&amp;quot;;&amp;quot;, c_start);
+      if (c_end == -1) c_end = document.cookie.length;
+      return decodeURI(document.cookie.substring(c_start,c_end));
+    }
+  }
+  return &amp;quot;&amp;quot;;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[ECMAScript 2017(ES8)]]></title><link>https://byungjune.github.io/javascript/ECMA-Script-2017(ES8)/</link><guid isPermaLink="false">https://byungjune.github.io/javascript/ECMA-Script-2017(ES8)/</guid><pubDate>Sun, 01 Apr 2018 00:00:00 GMT</pubDate><content:encoded>&lt;h2 style=&quot;text-align: center;&quot;&gt;&lt;strong&gt;Presentation slides about ECMAScript 2017 at &lt;a href=&quot;https://seoul.js.org/&quot;&gt;Seoul.js&lt;/a&gt; 1st summit - 2017.08.18&lt;/strong&gt;&lt;/h2&gt;
+&amp;nbsp;
+
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 72.91666666666666%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe src=&quot;//slides.com/onyoon7/ecmascript2017/embed&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; webkitallowfullscreen=&quot;webkitallowfullscreen&quot; mozallowfullscreen=&quot;mozallowfullscreen&quot; allowfullscreen=&quot;allowfullscreen&quot; style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          </content:encoded></item><item><title><![CDATA[Web Storage의 종류]]></title><description><![CDATA[Local Storage localStoage는 브라우저 창을 닫더라도 지속적으로 데이터가 존재한다. 즉 특별히 데이터를 지우지 않는 이상 영구적으로 데이터가 존재한다. Session Storage sessionStorage…]]></description><link>https://byungjune.github.io/browser/web-storage/</link><guid isPermaLink="false">https://byungjune.github.io/browser/web-storage/</guid><pubDate>Sat, 03 Mar 2018 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Local Storage&lt;/h3&gt;
+&lt;p&gt;localStoage는 브라우저 창을 닫더라도 지속적으로 데이터가 존재한다. 즉 특별히 데이터를 지우지 않는 이상 영구적으로 데이터가 존재한다.&lt;/p&gt;
+&lt;h3&gt;Session Storage&lt;/h3&gt;
+&lt;p&gt;sessionStorage는 해당 페이지가 존재하는 창의 생명주기로 해당 데이터가 존재한다. 즉 데이터를 저장한 웹페이지의 브라우저 창을 닫는다면 해당 데이터도 삭제된다. 또한 같은 웹사이트더라도 서로 다른 창으로 띄어 저장된 세션은 서로 간섭하지 않기 때문에 다른 창의 sessionStorage에 저장된 데이터를 조회할 수 없다.&lt;/p&gt;
+&lt;h2&gt;사용법&lt;/h2&gt;
+&lt;p&gt;localStorage와 sessionStorage는 window 레벨의 전역변수로 사용된다.&lt;/p&gt;
+&lt;h3&gt;localStorage&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 세션기간에 무관하게 브라우저에 저장
+localStorage.setItem(&amp;amp;amp;#039;key&amp;amp;amp;#039;, &amp;amp;amp;#039;value&amp;amp;amp;#039;);
+
+// 브라우저 종료 후 다시 접속했을 경우에도 해당 데이터 값 이용 가능
+localStorage.getItem(&amp;amp;amp;#039;key&amp;amp;amp;#039;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;sessionStorage&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// 세션기간 동안 브라우저에 저장
+sessionStorage.setItem(&amp;amp;amp;#039;key&amp;amp;amp;#039;, &amp;amp;amp;#039;value&amp;amp;amp;#039;);
+
+// 브라우저 종료 시 데이터 값 삭제
+sessionStorage.getItem(&amp;amp;amp;#039;key&amp;amp;amp;#039;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;브라우저 지원 현황(‘17.02.06기준)&lt;/h2&gt;
+&lt;p&gt;현재 날짜의 지원 여부는 &lt;a href=&quot;http://caniuse.com/#search=webstorage&quot;&gt;caniuse.com&lt;/a&gt; 에서 확인하세요.&lt;/p&gt;
+&lt;h2&gt;팁&lt;/h2&gt;
+&lt;p&gt;Q. localStroage나 sessionStorage와 같은 Web Storage의 value에 array나 object의 값을 넣고 싶다면 어떻게 해야 할까?&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word “and” and the Little Blind Text should turn around and
-return to its own, safe country.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.&lt;/p&gt;
-&lt;h4&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
-&lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.&lt;/p&gt;
-&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
-&lt;h5&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
-&lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rhetoric question ran over her cheek, then she continued her way. On her way she
-met a copy.&lt;/p&gt;
-&lt;h6&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
-&lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word “and” and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Wow! I love blogging so much already. Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/my-second-post/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;Wow! I love blogging so much already.&lt;/p&gt;
-&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich.”?
-(&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://gatsby-starter-blog-demo.netlify.com/hello-world/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;JSON을 이용하자.&lt;/p&gt;
+&lt;p&gt;데이터를 저장할 때 : sessionStorage.setItem(key,JSON.stringify(value))&lt;/p&gt;
+&lt;p&gt;데이터 로드 후 이용할 때 : JSON.parse(sessionStorage.getItem(key))&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[인생을 걸고 배우는 개발 : Bootcamp - 4주차]]></title><description><![CDATA[점점 배우는게 많아질 수록 Immersive Course…]]></description><link>https://byungjune.github.io/bootcamp/week_04/</link><guid isPermaLink="false">https://byungjune.github.io/bootcamp/week_04/</guid><pubDate>Thu, 14 Jul 2016 00:00:00 GMT</pubDate><content:encoded>&lt;div class=&quot;section-divider&quot;&gt; 이 글은 2016년 7월 14일에 작성된 글로, 2016년 4월부터 12주간 경험한 Programming Bootcamp에 관한 글입니다.
+&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;
+&lt;p&gt;점점 배우는게 많아질 수록 Immersive Course초기에 등록했던 피트니스센터에 가는 횟수는 줄어들고 점심시간과 운동시간 마져 스프린트에 열중하는, 그럴 수 밖에 없는 나를 보게 된다. 운동도 하고 싶고, 쉬고도 싶지만 아직 머릿속에 넣고 이해해야 할 게 산더미이기 때문에 이 불안한 마음을 조금이나마 달래기 위해서는 열심히 공부하고, 헤쳐나가야 할 것만 같다.
+(7월9일부로 Code/States Immersive 1기과정이 끝나고 졸업을 했다. 그렇기 때문에 기존의 Sprint와 그 당시에 적어놓은 노트와 코드 그리고 일기를 토대로 기억을 되살려 해당 블로그를 작성하였다.)&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;em&gt;DAY1~2. Servers and Node : “Chatterbox Server”&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;3주차에 간단한 채팅서비스 Chatterbox의 Front-end를 구현하는 Sprint를 했었다. 그 당시 기본적으로 셋팅된 Back-end를 이용했었는데, 이번에는 직접 Chatterbox의 Back-end를 구현해보는 Sprint이다. Back-end(Nodejs)와의 첫만남이였다.
+node서버를 돌리고 적용사항을 확인하기 위해서는 매번 아래와 같이 node 명령어를 사용해야만 했다.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
+&lt;p&gt;node server-file.js&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dXC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACEhEy/9oACAEBAAEFAkqW2DlnRj73yf/EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQL/2gAIAQIBAT8Bi6f/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAcEAADAQACAwAAAAAAAAAAAAABESEAMUGBobH/2gAIAQEAAT8hsTTH2wx5gg2ZgM8d5JIfmMRAIe//2gAMAwEAAgADAAAAEMgv/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAwEBPxARwyusv//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EFoktI//xAAcEAEBAAIDAQEAAAAAAAAAAAABEQAxIWGBQeH/2gAIAQEAAT8QRswtDR5g4a7R5C/RHFM3BKk6zThoVp3lEYcnjGIYES7/ACZ//9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Chinese Salty Egg&quot;
-        title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/c739e/salty_egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/8ee9c/salty_egg.jpg 148w,
-/static/8058f3f26913fea3b6a89a73344fe94a/ebbe7/salty_egg.jpg 295w,
-/static/8058f3f26913fea3b6a89a73344fe94a/c739e/salty_egg.jpg 590w,
-/static/8058f3f26913fea3b6a89a73344fe94a/5413e/salty_egg.jpg 885w,
-/static/8058f3f26913fea3b6a89a73344fe94a/4efde/salty_egg.jpg 1180w,
-/static/8058f3f26913fea3b6a89a73344fe94a/2b40c/salty_egg.jpg 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;하지만 이런 불편함을 참고만 있을 사람들이 아니었다. nodemon이라는 정말이지 너무나도 훌륭한 툴을 이용하면 서버 내 파일들을 감시하고 있다가 변동사항이 생기면 자동으로 새로고침을 해준다. So Coooooool! (물론 지금은 nodemon을 당연하게 생각했지만 이 때는 정말 굉장하다고 느꼈었다)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;nodemon server-file.js&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*Egdv3435kEbrkkcW32V18w.png&quot;&gt; 
+    &lt;p&gt;This is The First-server in my-life. Nice to meet Firebase&amp;#xA0;:&amp;#xA0;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;별것 아닌 것 같은 서버를 짜는데 꼬박 2일이 걸렸다. 나중에야 안 사실이지만 Node.js의 단짝 프레임워크인 express를 사용할 경우, 라우팅과 미들웨어를 굉장히 편하게 사용할 수 있다. 웹 개발과 REST API에 최적화된 프레임워크인 것 같다.
+하지만 express와 같은 별도의 프레임워크 없이 Node.js 만을 이용하여 간단한 서버를 구성하는 것은 좋은 경험이였던 것 같다. 프레임워크에 의존하고 어떻게 사용하는지에 중점을 두기 보다는 기본적으로 Node.js가 어떤 구조로 동작하는지에 조금 더 집중할 수 있었다. JavaScript를 이용해서 Front-End와 Back-End의 기술통합으로 좀 더 쉽고 빠르게 할 수 있다는 장점이 있는 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY3~4. Server-side Techniques : “Web Historian”&lt;/h4&gt;
+&lt;p&gt;이번 스프린트에서는 &lt;a href=&quot;http://archive.org&quot;&gt;archive.org&lt;/a&gt;(Internet archiving website)와 유사한 서비스를 구현했다. 즉 URL을 입력하면 해당 웹을 Local에 Text로 저장하고, 해당 복사본을 Client에게 보여주는 것이다. 여기에서 새롭게 등장하는 Key Concept 중 하나가 REST(Representational safe transfer)의 개념이다.
+REST는 Method, Message, Resource로 구성이 된다. Method는 HTTP Method인 CRUD(Create, Read, Update, Delete)에 해당하는 Post, Get, Put, Delete를 사용한다. Message는 말 그대로 전달할 내용을 뜻한다. 그리고 Resource는 해당 구조 타입에 알맞게 각 Resource에 id를 할당한다. 예를들어&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Http Post, http://medium.com/user
+{
+  user : june,  
+  title : Web Historian
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이라고 한다면, &lt;code class=&quot;language-text&quot;&gt;http://medium.com/user/&lt;/code&gt; 라는 Resource에 id는 june, Message는 ‘title : Web Historian’이라는 것을 Post method를 통해 등록하는 것이다. Post외에 Get, Put, Delete 또한 마찬가지 이다. REST API를 통한 통신을 하다보면 Post가 Put의 역할까지 할 수 있는 것으로 보이지만, 역할 상의 구분을 위해 개인적으로 Post는 신규데이터 등록, Put은 기존정보의 Update로 사용했다.
+또한 이번 스프린트부터는 반복적으로 사용되는 함수들을 별도의 helper file에 보관하여 재사용함으로써 반복적인 함수 선언을 피하고, 좀 더 코드의 질을 향상시키고자 했다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*3Tq3cGsoi784PtBU6snqKg.png&quot;&gt; 
+    &lt;p&gt;Helper file for which handler file stays clean, readable, manageable and&amp;#xA0;cool!!!&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Node.js, 그리고 REST API를 이용하여 서비스를 구현하였다. 해당 서비스페이지에서 url을 입력창에 url을 입력하면 site.txt에 해당 url이 기록되고, 해당 url의 text파일이 ./archive/sites 내에 url명의 파일로 기록된다. 그래서 기존에 입력한 local에 저장했던 url을 입력하면, 과거에 기록된 text를 불러와 해당 페이지를 다시 보여주게 된다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*7E3x4qbBItol1ffy6RoZpg.png&quot;&gt; 
+    &lt;p&gt;Web-Historian service&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;해당 서비스의 경우 &lt;a href=&quot;http://benr75.com/pages/using_crontab_mac_os_x_unix_linux&quot;&gt;crontab&lt;/a&gt;을 사용하여 일정시간마다 특정 사이트를 local에 저장할 수 있다.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;이번 스프린트에서는 Node.js의 FS(File System)패키지를 사용할 때도 동기식은 사용하지 못하도록 제한을 둬서 Node.js의 특징중 하나인 비동기에 대한 학습도 병행하였다. Callback Hell에 빠지지 않기위해 Promise 패턴을 사용하였다. Promise에 대해서는 아래의 블로그 글을 참고하여 쉽게 이해하고 사용할 수 있었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://programmingsummaries.tistory.com/325&quot;&gt;[JavaScript] &lt;em&gt;바보들을 위한 Promise 강의 - 도대체 Promise는 어떻게 쓰는거야?&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY5~6. Databases : “MySQL for Chatterbox app”&lt;/h4&gt;
+&lt;p&gt;이젠 Database다. 항상 내가 사용하는 서비스들이 내 정보를 어디다 모아놓는지 궁금했었는데, 바로 그 DB이다. MySQL을 통해 Front-end와 Back-end를 했던 Chatterbox의 Database를 학습했다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*S6yf2ddwFBH88LMgB5FKvg.png&quot;&gt; 
+    &lt;p&gt;Again, Chatter Box. But this time is for&amp;#xA0;MySQL!&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;RDBMS(Relational Database Management System, 관계형 데이터베이스)인 MySQL의 특성상 Join, Primary Key, Foreign Key를 통해 서로 관계를 설정하는 부분이 재미있었다. 금융권에 종사하는 Instructor분의 이야기에 따른 보수적인 금융권의 경우 몇백, 몇천개의 Join문이 나오기도 한다고 한다. 상대적으로 RDBMS가 신뢰성이 높고, 데이터무결성을 보장하기 때문에 금융권과 같은 보수적인, 데이터의 실수가 있어서는 안되는 곳에 많이 사용된다고 한다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;4주차의 끝을 보니, 어느정도 Front-end, Back-end, Database를 학습했다. 열심히 달려왔고, 죽을만큼 공부했지만 아직은 한참 부족한 것이 느껴진다. 꾸역꾸역 머릿속으로 여러가지를 넣고 있지만, 그것을 내 머릿속에 잘 자리잡게 하기까지는 조금 더 시간이 걸릴 것 같다. 하지만 4주전과 지금의 나를 비교해보면 성장하고 있는게 느껴진다. 앞으로 8주후 Immersive Course를 졸업할 때 쯤이면 성장해있을 나와 친구들의 모습이 궁금해진다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*DFlGxOajejVgFIjRXvwdbg.jpeg&quot;&gt; 
+    &lt;p&gt;He told strength of each member in immersive course. Thank you for his healing message&amp;#xA0;:&amp;#xA0;)&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[인생을 걸고 배우는 개발 : Bootcamp - 3주차]]></title><description><![CDATA[이 글은 2016년 5월 20일에 작성된 글로, 2016년 4월부터 12주간 경험한 Programming Bootcamp에 관한 글입니다. •   •   • 매일 아침9시, 그날의 시작과 함께 우리는 매일 Toy-Problem…]]></description><link>https://byungjune.github.io/bootcamp/week_03/</link><guid isPermaLink="false">https://byungjune.github.io/bootcamp/week_03/</guid><pubDate>Fri, 20 May 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 2016년 5월 20일에 작성된 글로, 2016년 4월부터 12주간 경험한 Programming Bootcamp에 관한 글입니다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*2_UDL1s0sIJCqteZyK9A9Q.jpeg&quot;&gt;
+    &lt;p&gt;Tough White-board Time in every Thursday. MISSION&amp;#x200A;&amp;#x2014;&amp;#x200A;During problem solving, keep&amp;#xA0;talking.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;매일 아침9시, 그날의 시작과 함께 우리는 매일 Toy-Problem으로 다양한 알고리즘 문제들을 푼다. 하지만 목요일만은 다르다. 목요일 아침으로 Pair White-boading시간이다. 2인1조가 되어 회사의 인터뷰를 보듯이 주어진 문제를 화이트보드에 풀고 설명한다. 화이트보딩과 손코딩이 익숙하지 않지만 생각하는 과정을 끊임없이 말로 설명하고, 문제 해결 과정의 방법을 찾아나간다. 솔루션이 바로 생각나지 않더라도 내가 알고 있는 것들을 최대한 설명하고, 그것들을 이용하여 문제를 해결하려고 한다. 이렇게 1시간 동안 화이트 보딩을 하고 나면 쌀쌀한 날씨에도 등에는 땀줄기가 흐른다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY1~2. Browser apps, jQuery, and Ajax : “Chatter Box”&lt;/h4&gt;
+&lt;p&gt;Firebase로 만들어진 Code/States 공통서버를 이용하여 채팅서비스를 구현하는 Sprint였다. 처음으로 서버와 연동하여 무언가를 만든다는 것이 신이 났었다. 하지만 생각보다 많은 어려움이 있었다. XSS attack을 피하기 위해 Text를 정규표현식(Regular Expression)으로 변환하였다. 그리고 카카오톡을 모방하여 새로운 메세지가 나올 때마다 new Audio를 사용하여 메세지 알림음이 발생하게 하였다. 또한 각 우리가 카카오톡에 들어가면 각 채팅창의 마지막 메세지가 채팅룸 목록에 보이는 것처럼 채팅창 제일 최신 메세지의 20자를 룸네임 아래에 보이도록 설정하였다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*pYgISj1glEzTl3VucRjScA.png&quot;&gt; 
+    &lt;p&gt;&amp;#x2018;isRinged&amp;#x2019; and &amp;#x2018;setTimeout&amp;#x2019; is a FLAG to block the excessive alarm.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;하지만 이런 기능구현과 버그 수정에만 집중을 하다보니 우리의 디자인(CSS)은 저기 저 먼 깐따비아 행성으로 가고 있었다. 그리고 그것을 되돌리기에 늦었다는 것을 우리는 너무 늦게 깨달아버렸다. 이 스프린트를 통해 무작정 기능 구현을 위해 코딩에 들어가기 보다는, 어떤 제품을 어떻게 만들 것인지에 대해서 팀원(페어)과 충분히 이야기를 하여 서로의 생각에 대해 컨센서스(Consensus)를 이루고 진행해야 한다는 것을 배웠다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*s2tLvj3jrcaB4IJR52ItIA.png&quot;&gt;
+    &lt;p&gt;I realized the importance of the designer&amp;#xA0;&amp;#x2026; OTL&amp;#xA0;&amp;#x2026; Left side&amp;#xA0;: Room list &amp;amp; Right side&amp;#xA0;: Chat&amp;#xA0;room&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY3~4. MVC and Backbone: “mytunes”&lt;/h4&gt;
+&lt;p&gt;이번 스프린트를 통해 데이터를 관리하는 Model, 유저에게 데이터를 보여주는 View, 그리고 사용자의 인터랙션을 전달해주는 Controller로 구성된 MVC패턴에 대해서 처음으로 학습하게 되었다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*vqgBTqvDOk_i7JCyhjEJdg.png&quot;&gt; 
+    &lt;p&gt;List of client part. data &amp;amp; models &amp;amp; collections &amp;amp; Views&amp;#xA0;&amp;#x2026; without Controller&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;실제로 우리가 구현한 Structure에서는 Controller가 없었다. 대신 View가 Controller의 기능들을 구현하였다. 실제로 Stackoverflow에 Backbone이 MVC 패턴인지 MV* 패턴인지에 대한 질문이 꽤 있는 것으로 보아 많은 사람들이 나와 같은 의구심을 같는 것 같다. 명확한 답은 없었지만 View가 Controller의 역할까지 하기 때문에 일종의 MVC패턴이라고 본다는 &lt;a href=&quot;http://stackoverflow.com/questions/10745782/is-backbone-js-really-an-mvc&quot;&gt;답변&lt;/a&gt;이 있었다. 실제로 &lt;a href=&quot;http://backbonejs.org/&quot;&gt;Backbone의 공식 홈페이지&lt;/a&gt;에는 별도로 Controller에 대한 설명은 없었다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*CBMqhK0BXMDVrFtfHyrqww.png&quot;&gt; 
+    &lt;p&gt;It is &amp;#x2018;myTunes&amp;#x2019; that is a friend of&amp;#xA0;&amp;#x2018;iTunes&amp;#x2019;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;유저인터페이스와 애플리케이션 로직을 분리하여 사용한다는데 있어서 MVC 패턴은 굉장히 편리했다. 하지만 양방향 데이터 바인딩에 대한 복잡함 때문에 이해하는데 많은 시간이 필요로 했다. 사실 현재 많이 사용하는 Javascript의 Front-End Framework으로는 Backbone보다는 Angular와 React가 핫(Hot) 한것 같다. 하지만 MVC 패턴을 이해하는데 있어서 유용한 스프린트였고, 앞으로 배울 &lt;a href=&quot;https://versus.com/ko/angularjs-vs-backbone-js&quot;&gt;Angular&lt;/a&gt;나 &lt;a href=&quot;https://github.com/facebook/react&quot;&gt;React&lt;/a&gt;와 비교하며 어떤 것의 어떤 점이 좋은지에 대한 고민을 해볼 필요가 있는 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY5~6. ES6, APIs, and React : “recast.ly”&lt;/h4&gt;
+&lt;p&gt;드디어 고대하던 React를 이용할 수 있는 Sprint가 나왔다. Facebook에서 개발하고, 한창 인기를 끌고있는 React를 이용하여 YouTube의 모방페이지를 구성하였다. 우선 기본DB를 이용하여 동작하는 홈페이지를 만들고, 추후에 YouTube의 API를 이용하여 라이브 연동이 되도록 하였다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*LLkSSYZLRchrxgA7ZlrHtw.png&quot;&gt; 
+    &lt;p&gt;Stucture of Directories&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;MVC패턴이 아닌 View에 특화된 React를 이용하면서, View를 Search, Videoplay, VideoList 3부분으로 나누어 프로그래밍을 진행했다. Parent에서 Child로의 단방향 통신을 이용해 Child에 변경사항이 발생할 때마다 데이터를 갱신해주는 React의 동작이 신기했다. 그리고 데이터의 흐름 중 props와 state 데이터가 존재하데 props는 parent에게 받은 데이터로써, 그 변경이 불가능하다. 하지만 state는 변경가능한 데이터이다. render()를 통해 지속적으로 동기하여 데이터를 표현해줘야 하는 경우, 이런 경우 state를 유용하게 사용하였다. onKeyDown을 통해 keydown을 인식하여 400ms의 간격으로 Live search가 되게 만들었다. 결과물은 아래와 같다.&lt;/p&gt;
+
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 62.5%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;iframe title=&quot;vimeo-player&quot; src=&quot;https://player.vimeo.com/video/167393684&quot; frameborder=&quot;0&quot; allowfullscreen style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+    &lt;p&gt;Result of recast.ly(seems like YouTube)&lt;/p&gt;
+&lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;MVC패턴에 대해 학습하고 다양한 Framework를 이용하여 학습을 한 한주였다. 앞으로도 5주차까지는 Framework에 대해 익숙해지고, 그를 이용한 Sprint를 진행할 것이다. 2일에 1개의 Sprint를 진행하면서 모든 것을 깊이있게 공부하고 넘어가지는 못 하고 있다. 하지만 하나의 Framework에 대해서 문서들과 API, Library를 이해하고 사용하는 것들에 익숙해지고 있다. 이제는 낯선 Framework를 진행하는 것이 두렵지 않고 설렌다. 기본에 충실하여 Framework에 대한 구조를 이해하는데 집중해야겠다. 6일간의 일정을 끝내는 토요일이 되면, 모두가 많이 지쳐있다. 하지만 6일간 우리들이 해낸 Sprint와 결과물들을 보면서 서로를 응원하고, 격려하고, 칭찬한다. 우리가 이렇게 재미있게 프로그래밍을 배울 수 있는 이유는 아마도, 서로가 각 자의 꿈을 위해서 열심히 하고 있으며, 함께 배울 수 있는 서로가 있어서가 아닐까 싶다. 그리고 그 서로가 있기에 힘든 과정도 즐겁게 할 수 있는 것 같다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*fTLsrwV3nckEf_2yGdydpQ.jpeg&quot;&gt;
+    &lt;p&gt;Happy Birthday Party in Code/States &amp;amp; HiveArena&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[인생을 걸고 배우는 개발 : Bootcamp - 2주차]]></title><description><![CDATA[이 글은 2016년 5월 18일에 작성된 글로, 2016년 4월부터 12주간 경험한 Programming Bootcamp에 관한 글입니다. •   •   • 본격적인 Sprint들이 시작되었다. Javascript의 inheritance…]]></description><link>https://byungjune.github.io/bootcamp/week_02/</link><guid isPermaLink="false">https://byungjune.github.io/bootcamp/week_02/</guid><pubDate>Wed, 18 May 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 2016년 5월 18일에 작성된 글로, 2016년 4월부터 12주간 경험한 Programming Bootcamp에 관한 글입니다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;본격적인 Sprint들이 시작되었다. Javascript의 inheritance와 prototype에 대해 학습하는 Pseudoclassical Subclasses, Recursion과 Javascript 구조에 대해 학습할 수 있었던 N-Queens, 그리고 Javascript의Data를 HTML, SVG(Scalable Vector Graphic), 그리고 CSS를 이용해서 뛰어난 View를 보여주는 D3js library까지… 하루 10시간 이상의 Pair programming(짝 프로그래밍)을 통해 달려갔다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY1~2. Inheritance patterns : “Subclass-Dance-Party”&lt;/h4&gt;
+&lt;p&gt;상속 패턴 학습를 통한 Dance-Party를 제작했다. 댄서 객체를 생성할 Dancer 함수 객체를 생성한 후, 그 특성 및 종류에 따라 3종류의 댄서(gif파일)를 만들었다. Add버튼을 통하여 종류별 댄서의 수를 늘릴 수 있고, ‘Go to strip bar’를 클릭하면 배경화면이 바뀌며, Row와 Column버튼을 통해 댄서가 줄을 맞추어 춤을 추도록 할 수 있다.&lt;/p&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*CRS9SYOynS77M8u3mZ7Ghw.png&quot; width=&quot;800&quot; height=&quot;413&quot; data-image-id=&quot;1*CRS9SYOynS77M8u3mZ7Ghw.png&quot; data-width=&quot;1280&quot; data-height=&quot;661&quot;&gt; &lt;p&gt;Make a dancer and move randomly with options(using by Inheritance pattern)&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;댄서 제작을 위한 각 함수는 Child Class를 생성하고 new를 통하여 생성자를 호출한 후 prototype chain을 활용하여 상속을 구성한다. Child class의 prototype은 Parent class의 인스턴스를 참조한다. 이렇게 생성한 각 댄서가 다른 종류의 댄서를 만났을 때 그 자리에 멈춰서 함께 춤을 추도록 하였다. 이를 위해 For-loop을 통해 각 댄서 사이의 거리를 계산하였고, 그 거리가 일정 픽셀이하가 되었을 때 move를 멈추게 하였다.&lt;/p&gt;
+&lt;p&gt;처음에는 랜덤값을 통하여 댄서의 이동을 컨트롤하였더니, 주어진 화면 밖으로 나가는 현상이 생겼다. 이를 수정하기 위해 만약 이동 후의 위치가 화면밖일 경우, 이동할 위치를 화면 안이 될 때까지 랜덤생성하도록 하였다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*Yk79s18EwVIosKhhwILVYQ.png&quot; width=&quot;399&quot; height=&quot;237&quot; data-image-id=&quot;1*Yk79s18EwVIosKhhwILVYQ.png&quot; data-width=&quot;399&quot; data-height=&quot;237&quot;&gt; 
+    &lt;p&gt;Result of Mocha-SpecRunner.html(Every sprint is with&amp;#xA0;TDD)
+    &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY3~4. Algorithm : “N-Queens”&lt;/h4&gt;
+&lt;p&gt;N-Queens란 체스의 (상하,좌우,대각선 이동이 가능한)퀸을 체스판에 놓을 때, 이동가능 경로가 다른 퀸가 겹치지 않도록 하여 놓는 것이다. 이동경로가 겹칠 경우, 해당경로는 아래 그림과 같이 붉은 색으로 채워진다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*H6WUlR-Qo6jafuXStJ8D_Q.png&quot; width=&quot;583&quot; height=&quot;579&quot; data-image-id=&quot;1*H6WUlR-Qo6jafuXStJ8D_Q.png&quot; data-width=&quot;583&quot; data-height=&quot;579&quot;&gt; 
+    &lt;p&gt;N-queens to check the validity whether I can put or not(using by Algorithms)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;우리는 이 Sprint를 풀기위해 우선 RowConflict, ColConflict, MajorDiagonalConflict, MinorDiagonalConflict 여부를 확인할 수 있는 함수를 작성하였다. 그리고 주어진 SpecRunner를 통해 함수의 정상작동여부를 확인할 수 있었다. 그리고 이렇게 개별적으로 작성한 함수를 통해 체스의 (상하, 좌우만 이동 가능한)룩과 퀸에 대한 솔루션과 그 경우의 수를 측정하는 함수를 작성하였다.&lt;/p&gt;
+&lt;p&gt;특히 경우의 수를 측정하기 위해서는 말을 체스판에 임의로 놓고 진행을 하다가 그 다음줄에 놓을 경우의 수가 없다면, 다시 이전으로 돌아와 다음 경우의 수로 진행을 하는 방법을 썼다. 처음에는 For-loop이나 While문으로 시도해보았지만, 계속 진행하다가 놓을 곳이 없다면 다시 이전으로 복귀를 해야한다는 점 때문에 그 구현이 어려웠다. 그렇기 때문에 나와 짝(Pair)은 2시간여를 그 알고리즘으로 고민을 하다가 결국 Recursive Function(재귀함수)으로 작성하기로 하였다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*6KfCLPveNIqck3HWSatjvg.png&quot; width=&quot;688&quot; height=&quot;499&quot; data-image-id=&quot;1*6KfCLPveNIqck3HWSatjvg.png&quot; data-width=&quot;688&quot; data-height=&quot;499&quot;&gt; 
+    &lt;p&gt;Recursive function to check the countNQueensSolutions&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;페어의 도움으로 성공적으로 재귀함수를 작성하여 이 솔루션을 구할 수 있었다. 재귀함수인 setNqueen함수의 2번째 if문을 통해 Queen의 충돌가능성이 없으면 해당 row의 column에 말을 놓았다고 가정하고, 재귀함수를 통해 다음줄로 진행하여 그 과정을 반복한다. 만약 계속 진행하다가 n개의 row에 진행되기 전 경우의 수가 없다면 이전으로 돌아가고, n개의 row까지 모두 진행되었다면 solutionCount를 1 증가 시킨 후 그 재귀함수는 종료되고 이전으로 돌아가 다른 솔루션을 찾기위해 계속 진행된다. column이 n이 되기 전까지 계속말이다.&lt;/p&gt;
+&lt;p&gt;추가적으로 Advanced 로 Bitwise연산을 이용하여 해당 솔루션들을 구현해보았다. 웹문서를 통해 그 방법을 배워 함수로는 구현하였지만, 그 내용은 이해하지 못했다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*9zMR0XZq8n3OlfCKzLWf6g.png&quot; width=&quot;560&quot; height=&quot;431&quot; data-image-id=&quot;1*9zMR0XZq8n3OlfCKzLWf6g.png&quot; data-width=&quot;560&quot; data-height=&quot;431&quot;&gt;
+    &lt;p&gt;It is THE Bitwise function to find &amp;#x2018;countNQueensSolutions&amp;#x2019;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h4&gt;DAY5~6. D3(Data-Driven Documents) : “Watchout”&lt;/h4&gt;
+&lt;p&gt;D3를 이용하여 움직이는 enemy를 만들고 그것을 피하는 일종의 게임을 만드는 Sprint였다. 우선 D3의 canvas를 설정한 뒤, transition과 setTimeout을 이용하여 움직이는 enemy를 생성하였다. 이 생성은 D3 웹API(Application Programming Interface)를 통해 쉽게 만들 수 있었다. 하지만 문제가 하나 발생하였다. 바로 이 enemy들이 우리가 정해준 canvas 밖으로 계속 빠져나간다는 것이였고, 우리의 통제를 벗어났다. 우리는 이것을 해결하는데 꽤 많은 시간을 할애하였고, 우리는 gravity를 이용하여 아래의 코드를 통해 문제를 해결하였다. enemy circle이 경계선으로 갈 경우, 중력과 같은 역할을 하는 gravity함수를 통해 canvas의 안으로 튕겨지는 것처럼 보이도록 했다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*EBr7vIZACx7Vzb50xZm_LA.png&quot; width=&quot;625&quot; height=&quot;199&quot; data-image-id=&quot;1*EBr7vIZACx7Vzb50xZm_LA.png&quot; data-width=&quot;625&quot; data-height=&quot;199&quot;&gt; 
+    &lt;p&gt;This code save us from the enemy blackhole that never&amp;#xA0;comeback&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;우리가 조종하는 Main Circle은 cx, cy좌표의 최대값을 canvas 내부의 값으로 한정하여 드래그 도중 Main Circle이 캔버스 밖으로 빠져나가 드래그로 다시 끌고올 수 없는 문제를 해결하였다. 처음에는 드래그의 경계를 두지 않아 캔버스 밖으로 빠져나갈 경우, 마우스의 클릭에 동작하지 않기 때문에 드래그로 불러올 수 없어서 아주 난감했었다.&lt;/p&gt;
+
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 52.65625000000001%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;iframe src=&quot;https://player.vimeo.com/video/167076983&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://vimeo.com/167076983&quot;&gt;watchout by D3&lt;/a&gt; from &lt;a href=&quot;https://vimeo.com/user45216530&quot;&gt;Yoon ByungJune&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+    &lt;p style=&quot;text-align: center;&quot;&gt;Check the collision the BIG BLACK circle with others(by using D3)&lt;/p&gt;
+&lt;/div&gt;
+          &lt;/div&gt;
+          
+&lt;p&gt;enemy와 Main Circle의 충돌은 각 값의 거리를 피타고라스 함수로 계산하여 측정하였고, 여러개의 enemy가 동시에 중복충돌하는 것을 카운트하지 못하도록 하기 위해서 setTimeout을 통해 일정시간동안의 충돌을 무시하도록 하였다.&lt;/p&gt;
+&lt;p&gt;사실 우리는 이런 게임을 만들었지만, D3는 데이터 시각화에 있어서 효과적으로 표현할 수 있는 좋은 라이브러리이다. D3의 다양한 &lt;a href=&quot;https://github.com/d3/d3/wiki/Gallery&quot;&gt;Examples&lt;/a&gt;를 보면 감탄사를 연발하며, 그 매력에 빠져들 수 밖에 없을 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;Javascript를 통하여 다양한 프로그램을 작성하고, 라이브러리와 친해지는 연습을 통해 API 문서와도 조금씩 친해지고 있다. 아직은 미숙한 Googling과 온통 영어로 된 낯선 API들이지만 그것들을 통해 조금씩 알아가고 적용해가면서 변화되어 가는 결과물들을 볼 때 정말 짜릿한 희열이 느껴진다. 매일 많은 시간 노트북에 앞에 앉아 머리를 감싸며 고민하고, 토론하고, 검색하는 그 시간들을 충분히 이겨낼 수 있을 만큼 : )&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/800/1*ApM5PEltvVIX3T9n4rGTxQ.jpeg&quot;&gt; 
+    &lt;p&gt;Happy moment in dance-party showcase&lt;/p&gt;
+&lt;/div&gt;</content:encoded></item><item><title><![CDATA[인생을 걸고 배우는 개발 : Bootcamp - 1주차]]></title><description><![CDATA[이 글은 2016년 5월 2일에 작성된 글로써, 2016년4월부터 12주간 경험한 Programming Bootcamp에 대한 글입니다. •   •   • 드디어 시작되었다. (능력있는) 좋은 개발자가 되겠다는 목표를 갖은 1…]]></description><link>https://byungjune.github.io/bootcamp/week_01/</link><guid isPermaLink="false">https://byungjune.github.io/bootcamp/week_01/</guid><pubDate>Mon, 02 May 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 2016년 5월 2일에 작성된 글로써, 2016년4월부터 12주간 경험한 Programming Bootcamp에 대한 글입니다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;드디어 시작되었다. (능력있는) 좋은 개발자가 되겠다는 목표를 갖은 12명의 동기들이 Immersive-course 1기라는 이름으로 모였다. 서로의 어색함을 풀기 위한 간단한 Welcome-orientation을 시작으로 12주를 함께 할 Immersive가 시작되었다. 우리의 스케쥴은 아래와 같다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;09:00 ~ 10:00 / Toy Problem / Data Structures, Algorithms 문제풀기&amp;lt;/blockquote&amp;gt;
+10:00 ~ 12:30 / Lecture &amp;amp;amp; Follow-up / Lecture Time &amp;amp;amp; Pair Programming
+12:30 ~ 13:30 / Lunch / 행복한 점심시간
+13:30 ~ 17:30 / Lecture &amp;amp;amp; Follow-up / Lecture Time &amp;amp;amp; Pair Programming
+17:30 ~ 18:30 / Dinner / 점심먹은지 얼마안되어 저녁
+18:30 ~ 19:00 / Student Presentation / 학생의 개인주제 프리젠테이션
+19:00 ~ 20:00 / Lecture &amp;amp;amp; Follow-up / Lecture Time &amp;amp;amp; Pair Programming
+20:00 ~ …….. / ‘Time to go home’ or ‘Shut up and Keep Code’&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;그날그날에 따라서 Instructure의 Lecture, Feed-back Time, Programing 결과물에 대한 Show Case와Code Review 등이 이루어진다. 하지만 대부분의 시작은 Pair Programming으로 2인 1조가 되어 학습과 코딩을 하는 시간이 이루어진다. 이러한 Pair Programming을 하다보면 하루의 시간이 너무도 빨리 지나간다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;(누군가는 잘하면 효율적인, 못하면 가문의 원수가 되는 짝 프로그래밍이라고 이야기하지만)Pair Programming으로 서로 함께 하다보면 생각보다 재미있는 것들이 많다. 한 사람은 네이게이터가 되어 솔루션이 나아갈 방향을 제시하고, 한 사람은 드라이버가 되어 네이게이터의 아이디어를 코드로 구현하게 된다. 네이게이터는 머리, 드라이버는 손이 되어 한 사람이 되어 그렇게 최적의 솔루션을 찾아간다. 그렇게 솔루션을 찾아가면서 서로의 아이디어를 주고받으며 더 나은 방향의 코딩을 하게 된다. 특히 새로운 것들을 배우다보면 누군가는 이해를 빠르게 하기도 하고, 누군가는 이해를 천천히 하기도 한다. 이 때 서로 질문과 답변, 그리고 그것들을 모색하는 과정에서 학습에 대한 이해도가 훨씬 높아진다. 특히 디버깅 시에는 Pair programming의 장점이 잘 들어난다. 학창시절 수학문제를 풀면서 계산실수를 해본적이 있는가? 나는 분명 제대로 풀었다고 생각을 했고, 검산까지 해보았지만 내 답은 어김없이 틀린적이 있을 것이다. 내가 타이핑한 코드를 보다보면 어디를 실수했는지, 어떤 문법을 잘못적었는지 잘 보이지 않는다. 하지만 옆에 있던 짝꿍이 ‘어!? 여기…’라는 말과 함께 손가락으로 가리킨 모니터 화면을 보면 어김없이 나의 실수가 드러난다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*c8T1orr0nL62JbbTU_kNpQ.jpeg&quot;&gt;&lt;p&gt;We are the ONE in pair programming&amp;#x200A;&amp;#x2014;&amp;#x200A;Code/States&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;나 혼자 하면 코딩을 했다면 나의 짝을 이해시킬 필요도 없을 것이고, 생각을 바로 타이핑할 수 있기 때문에 속도가 더 빠를지도 모른다. 하지만 우리가 이곳 프로그래밍 부트캠프에 와 있는 이유는 빨리가기 위해서가 아니라 멀리가기 위해서 이기 때문에,우리는 Pair Programming을 통해 멀리가는 법을 배우고 있다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*wHEelgAlUb6On5lCjVTWaQ.jpeg&quot;&gt;
+&lt;p&gt;If you want to go fast, go alone. If you want to go far, go together.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;1주차에는 Immersive-Course 이전에 했던, Pre-Course에서 했었던 &lt;a href=&quot;http://underscorejs.org/&quot;&gt;Underscore&lt;/a&gt;와 &lt;a href=&quot;http://www.integralist.co.uk/posts/js-recursion.html&quot;&gt;Recursion&lt;/a&gt;에 대해서 복습을 하고 Data Structure Sprint를 통해 Data Structure와 친해지는 시간을 가졌다. 코딩만 잘하면 되지, 무슨 이런게 필요해라고 생각을 했었다. 하지만 이제 3주차가 막 지난 지금은 그 자료구조를 잘 이용하면 조금이라도 최적화된, 그리고 Time Complexity를 개선하기 위해 그 자료구조를 잘 이용하여 코드에 적용하면 훨씬 좋다는 것을 깨닫고 있다. 자료구조를 잘 몰라도 코딩을 할 수 있고, 솔루션을 찾을 수 있는 것은 분명하다. 네비게이션이 없어도 우리는 목적지를 잘 찾아갈 수 있다. 하지만 Data Structure라는 네비게이션을 통해 좀 더 최적화된 길을 찾아가면 더 좋지 않을까?&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/1600/1*4lSzic1fshFMHhVsoMvUCg.jpeg&quot; data-image-id=&quot;1*4lSzic1fshFMHhVsoMvUCg.jpeg&quot; data-width=&quot;470&quot; data-height=&quot;350&quot;&gt;
+&lt;p&gt;Coding with Data Structure(But it is not necessary)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h3&gt;대표적 Data Structure 소개&lt;/h3&gt;
+&lt;h4&gt;1. Linear Structure : 데이터가 연속적으로 연결되어 있는 구조&lt;/h4&gt;
+&lt;p&gt;(1)리스트 : 노드의 포인터 부분을 이용하여 연결 구조. 데이터의 뒤 또는 앞뒤로 뒤 또는 앞뒤 노드의 위치정보를 갖고 있다. 줄줄이 묶인 영광굴비를 생각하면 쉬울 것이다. 변수에 정적영역을 할당하는 언어에서는 필요한 만큼 메모리를 확보하기 때문에 효율적인 메모리 관리가 가능하다. 하지만 자료의 탐색 등에 대해서 앞의 Node를 알아야 뒤의 Node를 찾을 수 있기 때문에 그 만큼 비용이 발생한다.&lt;/p&gt;
+&lt;p&gt;(2)스택 : (입력)위에서 쌓고, (출력)위에서 꺼내어 쓰는 구조로 Last In, First Out이라고도 불린다.&lt;/p&gt;
+&lt;p&gt;(3)큐 : (입력)뒤로 넣고, (출력)앞에서 꺼내어 쓰는 구조로 Last In, Last Out으로 불린다. 은행창구와 같이 먼저온 사람(데이터)의 업무를 먼저 처리하고, 나중에 온 사람(데이터)의 업무를 순차적으로 처리하는 구조이다.&lt;/p&gt;
+&lt;h4&gt;2. Nonlinear Structure : 데이터가 비연속적으로 연결되어 있는 구조&lt;/h4&gt;
+&lt;p&gt;(1) 트리 : Node와 Branch를 이용하여 사이클을 이루지 않도록 구성&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+&lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/1600/1*PFcu8YXj2NDd4EEW5TjZQQ.png&quot; width=&quot;440&quot; height=&quot;367&quot; data-image-id=&quot;1*PFcu8YXj2NDd4EEW5TjZQQ.png&quot; data-width=&quot;440&quot; data-height=&quot;367&quot;&gt; 
+&lt;p&gt;It is Tree used abstract data type(ADT)&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;(2)그래프 : Node와 Branch를 이용하여 사이클을 이루도록 구성&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/1600/1*BWoSrCS4UEgxDp6spTBJ0A.png&quot; width=&quot;250&quot; height=&quot;225&quot; data-image-id=&quot;1*BWoSrCS4UEgxDp6spTBJ0A.png&quot; data-width=&quot;250&quot; data-height=&quot;225&quot;&gt; &lt;p&gt;It is Graph, abstracted data type,&amp;#xA0;too&lt;/p&gt;&lt;/div&gt;
+&lt;h4&gt;3. Etc&lt;/h4&gt;
+&lt;p&gt;(1)Hash Table : 키를 특정한 함수에 넣어 나온 인덱스값에 데이터를 저장하는 방식이다.&lt;/p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;img class=&quot;graf-image&quot; src=&quot;https://cdn-images-1.medium.com/max/1600/1*iHTnDFd3sR5FqjHD1FDu9A.png&quot; width=&quot;630&quot; height=&quot;460&quot; data-image-id=&quot;1*iHTnDFd3sR5FqjHD1FDu9A.png&quot; data-width=&quot;630&quot; data-height=&quot;460&quot;&gt;&lt;p&gt;hash table (hash map) used to implement an associative array&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;자료구조에 대해서는 앞으로 프로그래밍을 하면서 계속 적용해보는 노력이 필요할 것이다. 그리고 그 내용에 대해서도 확실히 알아야 할 것이다. (왜냐하면 나는 인터뷰도 보아야 하니깐!) 이제 막 12주 중 3주가 지났고, 앞으로도 9주가 남았다. 우리 코드스테이츠의 1기들이 무엇을 배울지, 그리고 어떻게 성장하게 될지 기대하시라. : )&lt;/p&gt;</content:encoded></item><item><title><![CDATA[인생을 걸고 배우는 개발 : Bootcamp - Intro]]></title><description><![CDATA[이 글은 2016년 4월 25일에 작성된 글로써, 2016년4월부터 12주간 경험한 Programming Bootcamp에 대한 글입니다. •   •   • 이제 결혼 3년차가 되는 나에게, 매달 2…]]></description><link>https://byungjune.github.io/bootcamp/intro/</link><guid isPermaLink="false">https://byungjune.github.io/bootcamp/intro/</guid><pubDate>Mon, 25 Apr 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 2016년 4월 25일에 작성된 글로써, 2016년4월부터 12주간 경험한 Programming Bootcamp에 대한 글입니다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;이제 결혼 3년차가 되는 나에게, 매달 25일이면 제법 큰 돈을 입금해주는 회사를 나온다는 것은 쉬운 일이 아니었습니다. 나뿐만 아니라 아내에게도 쉬운 결정은 아니었습니다. 개발자로 커리어를 변경하겠다는 그 불확실한 미래를 위해, 잠시나마(언제까지일지는 모르지만) 돈을 벌지 못하는 가장이 된다는 것, Bootcamp(Code/States)가 아니었다면 하지 못할 결정이었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;미국, 유럽 등에서는 한창 유행하고 있는 Programming Bootcamp. 특히 미국에서 유명한 &lt;a href=&quot;http://www.hackreactor.com/&quot;&gt;HackReactor&lt;/a&gt;는 12주의 교육을 마친 졸업생의 99%가 3개월 내에 취업을 하고, 졸업생의 평균 연봉이 $105k, 우리나라 돈으로 약 1.2억원이 된다고 합니다. 요즘말로 깜.놀(깜짝놀랄만한 일) 이다. 이런 부트캠프를 통해 많은 사람들이 개발자로 새로운 인생을 살고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-images-1.medium.com/max/1600/1*H2PLTeiMVltTWrdROA9JYg.jpeg&quot; alt=&quot;Image of study&quot;&gt;
+&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;
+&lt;br/&gt;
+대학에서의 전공과정과 컴퓨터 학원의 커리큘럼 외에는 개발자가 되기 위한 교육을 받기 어려운 우리나라에, 실리콘밸리와 스타트업들이 선호하는 Programing Bootcamp의 커리큘럼과 교육방식을 적용한 Code/States 가 탄생되었습니다. 그리고 2016년1월 Pre-course 1기를 시작으로, 2016년 4월부터 Immersive 1기도 시작되었습니다.&lt;/p&gt;
+&lt;p&gt;앞으로 블로그를 통해 Code/States Immersive Course 1기 중 한 명으로 그 시작과 12주 동안의 여정을 소개하려 한다.&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;center&gt;•   •   •&lt;/center&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;h3&gt;Curriculums&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;- Week 1 — Orientation and Pre-course Review, Data Modeling and Classes, Data Structures and Complexity Analysis
+- Week 2 — Algorithms, Inheritance Patterns, D3
+- Week 3 — Browser apps, jQuery, and AJAX, Frameworks, MVC, and Backbone, ES6, APIs, and React
+- Week 4 — Servers and Node, Server-side Techniques, Databases
+- Week 5 — Authentication, Deployment, Angular
+- Week 6 — MVP Project, Greenfield Project, Hiring Assessment Solo Week / Vacation
+- Week 7 — Senior Schedule Begins, Legacy Project, Post Development, Professional Resume
+- Week 8 — Thesis Project Kickoff / Thesis Sprint 1, Thesis Sprint 2, Thesis Sprint 3
+- Week 9 — Thesis Sprint 4, Thesis Sprint 5, Thesis Sprint 6
+- Week 10 — Thesis Sprint 7, Thesis Sprint 8, Thesis Sprint 9
+- Week 11 — Thesis Sprint 10, Thesis Sprint 11, Thesis Sprint 12, Demo Day
+- Week 12 — Hiring Sprint, Job Search Sprint, Interview Day&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[…]]></description><link>https://byungjune.github.io/hello-world/</link><guid isPermaLink="false">https://byungjune.github.io/hello-world/</guid><pubDate>Fri, 01 Apr 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;올해 초 프로그래밍 부트캠프를 통해서 주니어 개발자라는 태그를 달았고, 스타트업의 개발자가 되면서 개발자로써의 첫 발을 내딛었다. “어떻게 하면 좋은 개발자가 될 수 있을까?”라는 질문을 되새기며 결심한 것 중 하나가 바로 ‘블로그 하기’이다. (결심을 한지 몇 달이 지나서야 도메인을 구입했고, 도메인을 구입한 지 한달하고도 보름이 지나서야 첫 글을 쓰긴했지만) 이제 막 들어선 ‘개발’이라는 세계에서 새로운 걸 보고, 느끼고, 배우는 것들에 대해서 기록을 남기기 위해서 블로그를 만들었다.&lt;/p&gt;
+&lt;p&gt;개발을 먼저 시작한, 흔히 말해 좋은 개발자라고 알려진 분들 중 많은 분들이 블로그를 하라고 추천해주신다. 나를 위해서, 그리고 남을 위해서.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;‘Ideas worth spreading’ by TED.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;개발에 대해서 공부할 때, stackoverflow와 여러 블로그들(&lt;a href=&quot;https://taegon.kim/&quot;&gt;코드쓰는사람(김태곤님)&lt;/a&gt;, &lt;a href=&quot;http://programmingsummaries.tistory.com&quot;&gt;감성프로그래밍&lt;/a&gt;, &lt;a href=&quot;https://blog.outsider.ne.kr/&quot;&gt;Outsider’s Dev Story&lt;/a&gt;, &lt;a href=&quot;http://bcho.tistory.com/&quot;&gt;조대협의 블로그&lt;/a&gt; 등등)을 통해 많은 도움을 받았었다.&lt;/p&gt;
+&lt;p&gt;누군가가 공유해준 나에게 도움이 되었던 글들이 나에게 많은 도움이 되었던 것 처럼, 한참 부족한 나를 채워가는 과정들을 담은 나의 작은 글들도 누군가에게는 도움이 되길 바라본다.&lt;/p&gt;</content:encoded></item></channel></rss>
